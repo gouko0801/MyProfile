@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>muruyo PROFILE SITE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="guitars.css">
+    <script src="https://kit.fontawesome.com/2821a8c349.js"></script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="header-tag">
+          <a  href="index.html">
+            TOP
+          </a>
+        </li>
+        <li class="header-tag">
+          <a href="profile.html">
+            PROFILE
+          </a>
+        </li>
+        <li class="header-tag">
+          <a  href="portfolio.html">
+            PORTFOLIO
+          </a>
+        </li>
+        <li class="header-tag">
+          <a href="guitars.html">
+            GUITARS
+          </a>
+        </li>
+      </ul>
+    </header>
+
+   <section class="guitars hidden" id="guitar1">
+     <h1>Fender Japan Stratocaster</h1>
+          <img src="img/guitar1.jpeg" alt="ストラトキャスター">
+          <p>中学1年生の冬に入手。</p>
+          <p>初めて入手したギターにして所持しているギターの中で</p>
+          <p>唯一名の知られたギターである。</p>
+          <p>有名なだけあって巷でよく聴くギターの音を出すことができるが、</p>
+          <p>入手以降メンテナンスをしていないのでノイズが乗ってしまう。</p>
+          <p>the pillowsの真鍋吉明氏が一時期使っていたストラトと色が同じなのが嬉しいところ。</p>
+          <a id="close1" href="">CLOSE</a>
+   </section>
+
+   <section class="guitars hidden" id="guitar2">
+     <h1>Danelector Dead on 67</h1>
+     <img src="img/guitar2.jpeg">
+     <p>Galileo Galileiのボーカルがこのギターを使用しており</p>
+     <p>それまで見たことないギターであることや安価だった為19の時購入。</p>
+     <p>ほぼ出回っておらずネットでは黄緑色しか在庫がなくそれを購入したが、</p>
+     <p>「残っているのが黄緑じゃなくてオレンジでした」とのことでこれになる。</p>
+     <p>安物感漂うが、なんとも言えない独特の音ではある。</p>
+     <p>ストラトよりこっちの方がハマることもしばしば。</p>
+     <a id="close2" href="">CLOSE</a>
+   </section>
+
+   <section class="guitars hidden" id="guitar3">
+     <h1>Ibanez AS73D-TRD</h1>
+     <img src="img/guitar3.jpeg">
+     <p>セミアコが欲しくなり24の冬に購入。</p>
+     <p>所持している中で一番最近に購入したのもあり</p>
+     <p>ついついこのギターを弾いてしまう。</p>
+     <p>他のギターと比べると太く甘い音が出るので</p>
+     <p>リードパートはこれ使っとけばいいでしょ！という気分になるが</p>
+     <p>歪みであまりいい音を出せない。なんとかしたい。</p>
+     <a id="close3" href="">CLOSE</a>
+   </section>
+
+    <section>
+      <div class="container">
+        <div class="guitar">
+          <img src="img/guitar1.jpeg">
+          <a class="btn btn-1" id="btn1">ABOUT</a>
+          <a id="sound1" class="btn">SOUND</a>
+       </div>
+        <div class="guitar">
+          <img src="img/guitar2.jpeg">
+          <a class="btn" id="btn2">ABOUT</a>
+          <a id="sound2" class="btn">SOUND</a>
+        </div>
+        <div class="guitar">
+          <img src="img/guitar3.jpeg">
+          <a class="btn" id="btn3">ABOUT</a>
+          <a id="sound3" class="btn">SOUND</a>
+        </div>
+      </div>
+    </section>
+
+　
+
+    <footer>
+      <div class="icon">
+        <a href="https://twitter.com/muruyo55" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="c">
+        <p>©2019 muruyo</p>
+      </div>
+    </footer>
+    <script src="js/guitar.js">
+   </script>
+   <script type="text/javascript">
+   const sounds = [new Audio('./sound/strat.mp3'), new Audio('./sound/danelector.mp3'), new Audio('./sound/ibanez.mp3')];
+   const plays = [document.getElementById('sound1'), document.getElementById('sound2'), document.getElementById('sound3')];
+   for(let i = 0; i < plays.length; i++){
+     plays[i].addEventListener('click', () => {
+       sounds.forEach(sound => {
+         sound.pause();
+         sound.currentTime = 0;
+       });
+         if(plays[i].textContent !== 'SOUND'){
+           plays[i].textContent = 'SOUND';
+           return;
+         }else{
+         plays.forEach(play => {
+           play.textContent = 'SOUND';
+       });
+       sounds[i].play();
+       plays[i].textContent = 'STOP';
+    }
+  });
+
+  sounds[i].addEventListener('ended', () => {
+    plays[i].textContent = 'SOUND';
+  });
+   }
+
+
+   </script>
+  </body>
+</html>

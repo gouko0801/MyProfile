@@ -1,0 +1,41 @@
+section{
+  margin-bottom: 50px;
+  padding-top: 76px;
+}
+
+.container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container h1{
+  margin: 30px 0;
+}
+
+.container p{
+  line-height: 25px;
+}
+
+section ul{
+  padding-left: 18px;
+}
+
+section img{
+  width:280px;
+}
+
+@media all and (max-width: 670px){
+  section img{
+    width: 200px;
+  }
+
+  .container h1{
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .container p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

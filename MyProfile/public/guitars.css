@@ -1,0 +1,117 @@
+section{
+  margin-bottom: 50px;
+  padding-top: 106px;
+}
+
+.container{
+  display: grid;
+  grid-template: repeat(1, 600px) / repeat(3, 350px);
+  justify-content: space-around;
+}
+
+.container h1{
+  margin: 30px 0;
+}
+
+.guitar{
+  text-align:center;
+}
+
+
+.guitar a:hover{
+ text-decoration: underline;
+}
+
+.guitar img{
+  width: 350px;
+}
+
+.btn{
+  opacity: .7;
+}
+
+.btn:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+.guitar-about a:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.guitars{
+  padding: 0;
+  background-color:white;
+  position: fixed;
+  z-index: 6;
+  width: 500px;
+  text-align: center;
+  left: 50%;
+  margin-top: 100px;
+  margin-left: -250px;
+  border: solid 1px #dcdcdc;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #808080;
+}
+
+.guitars img{
+  height: 200px;
+  display: block;
+  margin: 30px auto;
+}
+
+.guitars p{
+  margin: 10px 15px;
+  text-align: left;
+}
+
+.guitars a{
+  display: block;
+  color: black;
+  opacity: .7;
+  padding:20px 0;
+}
+
+.guitars a:hover{
+  opacity: 1;
+}
+
+.hidden{
+  display: none;
+}
+
+
+@media all and (max-width: 1100px){
+  .container{
+    grid-template: repeat(3, 600px) / repeat(1, 350px);
+  }
+}
+
+@media all and (max-width: 670px){
+  .guitars{
+    width: 350px;
+    left: 50%;
+    margin-left: -175px;
+  }
+
+  .guitars h1{
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .guitars p{
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .guitars a{
+    font-size:13px;
+    padding: 10px 0;
+  }
+
+  .guitars img{
+    height: 120px;
+  }
+}

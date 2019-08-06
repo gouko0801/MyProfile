@@ -1,0 +1,112 @@
+section{
+  margin-bottom: 50px;
+  padding-top: 76px;
+}
+
+.container{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.container h1{
+  margin: 30px 0;
+}
+
+.container p{
+  line-height: 25px;
+}
+
+.container a{
+  display: inline-block;
+  color: black;
+  opacity: .7;
+  padding:20px 0;
+}
+
+.container a:hover{
+  opacity: 1;
+}
+
+
+section ul{
+  padding-left: 18px;
+}
+
+
+.effectors{
+  padding: 0;
+  background-color:white;
+  width: 500px;
+  text-align: center;
+  margin: 50px auto 35px auto;
+  border: solid 1px #dcdcdc;
+  border-radius: 5px;
+}
+
+.effectors img{
+  height: 200px;
+  display: block;
+  margin: 30px auto;
+}
+
+.effectors p{
+  margin: 10px 15px;
+  text-align: left;
+}
+
+.effectors a{
+  display: inline-block;
+  color: black;
+  opacity: .7;
+  padding:20px 0;
+}
+
+.effectors a:hover{
+  opacity: 1;
+}
+
+.hidden{
+  display: none;
+}
+
+
+@media all and (max-width: 670px){
+
+  .container h1{
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .container p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  #btn{
+    display: inline-block;
+  }
+
+    @media all and (max-width: 670px){
+      .effectors{
+        width: 350px;
+      }
+
+      .effectors h1{
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      .effectors p{
+        font-size: 13px;
+        line-height: 15px;
+      }
+
+      .effectorss a{
+        font-size:13px;
+        padding: 10px 0;
+      }
+
+      .effectors img{
+        height: 120px;
+      }
+  }

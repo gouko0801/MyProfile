@@ -1,0 +1,16 @@
+.room{
+  background-image: url(img/image1.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  margin-bottom: 30px;
+  padding-top: 76px;
+  text-align: center;
+}
+
+.room h1{
+  font-weight: normal;
+  color: white;
+  line-height: 860px;
+  font-size: 30px
+}

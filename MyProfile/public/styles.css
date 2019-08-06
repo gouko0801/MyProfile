@@ -1,0 +1,67 @@
+body{
+margin: 0;
+padding: 0;
+}
+
+h1, h2, p, a,{
+margin: 0;
+padding: 0;
+opacity: .7;
+}
+
+
+h1{
+  letter-spacing: 0.2em;
+}
+
+p, a{
+  letter-spacing: 0.1em;
+}
+
+header{
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  z-index: 5;
+  background-color: white;
+}
+
+.header-tag{
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.header-tag a{
+  text-decoration: none;
+  color: black;
+}
+
+.header-tag :hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+
+
+footer{
+  width: 90%;
+  margin:30px auto;
+}
+
+footer a{
+  color: black;
+  font-size:25px;
+  marigin: 15px 0;
+}
+
+footer a:hover{
+  opacity: 1;
+}
+
+footer p{
+  font-size: 12px;
+}
+
+footer div{
+  text-align: center;
+}
