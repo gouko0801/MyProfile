@@ -19,6 +19,7 @@ section{
 a{
   color: black;
   padding:20px 0;
+  text-decoration: none;
 }
 
 h2{
@@ -28,5 +29,17 @@ h2{
 }
 
 h2:hover{
+  text-decoration: underline;
   opacity: 1;
+}
+
+.anime{
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s;
+}
+
+.hidden{
+  opacity: 0;
+  transform: scale(0);
 }

@@ -1,0 +1,27 @@
+.topic{
+  padding: 100px 0 15px 0;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+}
+
+.section{
+height: 588px;
+width: 588px;
+border: solid 1px black;
+border-radius: 6px;
+margin: 0 auto;
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  height: 70px;
+  width: 70px;
+  margin: 4px;
+  padding: 0;
+  display: inline-block;
+}

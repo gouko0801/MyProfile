@@ -41,6 +41,9 @@ section ul{
   margin: 50px auto 35px auto;
   border: solid 1px #dcdcdc;
   border-radius: 5px;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0,5s;
 }
 
 .effectors img{
@@ -67,6 +70,9 @@ section ul{
 
 .hidden{
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0s 0.3s;
+  transform: scale(0);
 }
 
 

@@ -1,0 +1,59 @@
+.effector{
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.section-h1{
+  margin: 0 auto;
+  padding:100px 0 50px 0;
+  color: black;
+  text-align: center;
+}
+
+.section-items{
+display: inline-block;
+margin: 60px 15px 20px 15px;
+}
+
+a:hover{
+  text-decoration: underline;;
+}
+
+.section-items-img{
+  height: 200px;
+}
+
+.section-btn{
+  display: block;
+  text-align: center;
+  color: black;
+  opacity: .7;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.section-btn:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.section-items-btn{
+  display: block;
+  text-align: center;
+  color: black;
+  opacity: .7;
+}
+
+.section-items-btn:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+  @media all and (max-width: 670px){
+    .section-items{
+      display: block;
+      margin: 35px auto;
+      width: 150px;
+    }

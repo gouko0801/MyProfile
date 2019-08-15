@@ -1,42 +1,32 @@
 'use strict'
 {
-const guitar1 = document.getElementById('guitar1');
-const guitar2 = document.getElementById('guitar2');
-const guitar3 = document.getElementById('guitar3');
+const btn = [document.getElementById('btn1'), document.getElementById('btn2'), document.getElementById("btn3")];
+const closes = [document.getElementById('close1'), document.getElementById('close2'), document.getElementById("close3")];
+const guitars = [document.getElementById('guitar1'), document.getElementById('guitar2'), document.getElementById("guitar3")];
+const mask = document.getElementById('mask');
 
+for(let i = 0; i < btn.length; i++){
+  btn[i].addEventListener('click', () => {
+    for(let x = 0; x < guitars.length; x++){
+      guitars[x].classList.add('hidden');
+    }
+    guitars[i].classList.remove('hidden');
+    mask.classList.remove('hidden');
+  });
+}
 
-document.getElementById('btn1').addEventListener('click', () =>{
-  guitar1.classList.remove('hidden');
-  guitar2.classList.add('hidden');
-  guitar3.classList.add('hidden');
+for(let i = 0; i < closes.length; i++){
+  closes[i].addEventListener('click', e => {
+    e.preventDefault();
+    guitars[i].classList.add('hidden');
+    mask.classList.add('hidden');
+  });
+}
+
+mask.addEventListener('click', () => {
+  for(let i =0 ; i < closes.length; i++){
+    closes[i].click();
+  }
 });
-
-document.getElementById('btn2').addEventListener('click', () =>{
-  guitar2.classList.remove('hidden');
-  guitar1.classList.add('hidden');
-  guitar3.classList.add('hidden');
-});
-
-document.getElementById('btn3').addEventListener('click', () =>{
-  guitar3.classList.remove('hidden');
-  guitar1.classList.add('hidden');
-  guitar2.classList.add('hidden');
-});
-
-document.getElementById('close1').addEventListener('click', e =>{
-  e.preventDefault();
-  guitar1.classList.add('hidden');
-});
-
-document.getElementById('close2').addEventListener('click', e =>{
-  e.preventDefault();
-  guitar2.classList.add('hidden');
-});
-
-document.getElementById('close3').addEventListener('click', e =>{
-  e.preventDefault();
-  guitar3.classList.add('hidden');
-});
-
 
 }

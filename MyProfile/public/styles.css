@@ -18,6 +18,14 @@ p, a{
   letter-spacing: 0.1em;
 }
 
+i{
+  opacity: .7;
+}
+
+i:hover{
+  opacity: 1;
+}
+
 header{
   width: 100%;
   margin: 0;

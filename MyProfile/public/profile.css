@@ -24,6 +24,17 @@ section img{
   width:280px;
 }
 
+.anime{
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s;
+}
+
+.hidden{
+  opacity: 0;
+  transform: scale(0);
+}
+
 @media all and (max-width: 670px){
   section img{
     width: 200px;
