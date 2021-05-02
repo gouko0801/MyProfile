@@ -25,3 +25,7 @@ img{
   padding: 0;
   display: inline-block;
 }
+
+.select {
+  border: solid 2px red;
+}
