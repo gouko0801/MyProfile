@@ -5,11 +5,12 @@
   // パズルのフィールドとして使用するp要素の取得
   const fields = document.getElementById('section').querySelectorAll('p');
   // パズルを選択している状態
-  let isSelect = false;
+  let isFirstSelect = true;
   // 選択しているパズル
   let selectPuzzle = null;
-  // 選択しているパズルのインデックス
+  // 選択したパズルのインデックス
   let selectIndex = null;
+  let secondIndex = null;
 
   // フィールドにパズルを配置する
   const puzzleSet = () => {
@@ -23,6 +24,13 @@
     });
   }
 
+  // パズル入れ替え後消えるパズルを調べてインデックスを返す
+  const lostPazzleSearch = (puzzles, selectIndex, secondIndex) => {
+    const lostIndex = [];
+    const yoko = !(selectIndex - 1 === secondIndex || selectIndex + 1 === secondIndex);
+    
+  }
+
   puzzleSet(null);
 
   // 配置したパズルを配列に格納する
@@ -33,17 +41,22 @@
       puzzles[puzzles.length] = pi;
     });
   }
-  console.log(puzzles);
 
+  // パズルを選択して入れ替えて消す処理
   puzzles.forEach((puzzle, i) => {
     puzzle.addEventListener('click', () => {
-      // パズルが選択されている状態で選択されたパズルの縦横に面していない場合はリターンする
-      if(isSelect && (puzzle === selectPuzzle || puzzle === puzzles[i + 1] || puzzle === puzzles[i - 1] || puzzle === puzzles[i + 7] || puzzle === puzzles[i - 7])) {
-        console.log('縦横リターン')
-        return;
-      }
-      if (isSelect) {
-        isSelect = false;
+      // 最初の選択か(選択されているパズルがないか)
+      if (isFirstSelect) {
+        puzzle.classList.add('select');
+        selectPuzzle = puzzle;
+        selectIndex = i;
+        isFirstSelect = false;
+      } else {
+        // パズルが選択されている状態で選択されたパズルの縦横に面していない場合はリターンする
+        if(puzzle !== selectPuzzle && selectPuzzle !== puzzles[i + 1] && selectPuzzle !== puzzles[i - 1] && selectPuzzle !== puzzles[i + 7] && selectPuzzle !== puzzles[i - 7]) {
+          return;
+        }
+        isFirstSelect = true;
         // 選択しているパズルをクリックした場合選択状態を解除する
         if (puzzle === selectPuzzle) {
           puzzle.classList.remove('select');
@@ -52,15 +65,11 @@
         const secondSelectPuzzle = puzzle.currentSrc;
         puzzle.setAttribute('src', selectPuzzle.currentSrc);
         selectPuzzle.classList.remove('select');
-        console.log(secondSelectPuzzle);
         selectPuzzle.setAttribute('src', secondSelectPuzzle);
-      } else {
-        console.log(puzzle.currentSrc);
-        puzzle.classList.add('select');
-        selectPuzzle = puzzle;
-        selectIndex = i;
-        isSelect = true;
+        const lostIndex = lostPazzleSearch(puzzles, selectIndex, i);
       }
     });
   });
+
+
 }
