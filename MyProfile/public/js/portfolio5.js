@@ -31,11 +31,10 @@
       || puzzles[x][y].currentSrc !== puzzleType
       || puzzles[x][y].classList.contains('lost')
     ) {
-      console.log(count);
       return count;
     }
-    count++;
 
+    count++;
     checkedPuzzles[x][y] = true;
     count = lostPuzzleSearch(puzzleType, x - 1, y, count);
     count = lostPuzzleSearch(puzzleType, x, y - 1, count);
@@ -86,21 +85,22 @@
           }
           // パズルが選択されている状態で選択されたパズルの縦横に面していない場合はリターンする
           // 一番上の行で移動時バグがある
+          /*
           if(puzzles[selectedX][selectedY] !== puzzles[x + 1][y] && puzzles[selectedX][selectedY] !== puzzles[x - 1][y] && puzzles[selectedX][selectedY] !== puzzles[x][y + 1] && puzzles[selectedX][selectedY] !== puzzles[x][y - 1]) {
             console.log('return')
             return;
           }
+          */
           const secondSelectPuzzle = puzzle.currentSrc;
           puzzle.setAttribute('src', puzzles[selectedX][selectedY].currentSrc);
           puzzles[selectedX][selectedY].classList.remove('select');
           puzzles[selectedX][selectedY].setAttribute('src', secondSelectPuzzle);
           for (let _y = 0; _y < puzzles.length; _y++) {
             for (let _x = 0; _x < puzzles[x].length; _x++) {
-              const lostPuzzleCount = lostPuzzleSearch(puzzles[_x][_y].currentSrc, _x, _y, 0);
-              console.log(lostPuzzleCount);
-              if (lostPuzzleCount >= 3) {
+              if (lostPuzzleSearch(puzzles[_y][_x].currentSrc, _y, _x, 0) >= 3) {
                 console.log('lost');
-                puzzles[_x][_y].classList.add('lost');
+                puzzles[_y][_x].classList.add('lost');
+                puzzles[_y][_x].classList.add('none')
               }
             }
           }

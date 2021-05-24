@@ -35,3 +35,7 @@ img{
   opacity: 0;
   transition: 0.5s;
 }
+
+.none {
+  opacity: 0;
+}
