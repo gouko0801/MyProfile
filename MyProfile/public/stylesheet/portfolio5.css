@@ -25,3 +25,17 @@ img{
   padding: 0;
   display: inline-block;
 }
+
+.select {
+  border: solid 2px red;
+  box-sizing: border-box;
+}
+
+.lost {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.none {
+  opacity: 0;
+}
