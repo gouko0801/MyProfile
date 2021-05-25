@@ -1,12 +1,12 @@
 body{
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, p, a,{
-margin: 0;
-padding: 0;
-opacity: .7;
+h1, h2, p, a{
+  margin: 0;
+  padding: 0;
+  opacity: .7;
 }
 
 
@@ -59,7 +59,7 @@ footer{
 footer a{
   color: black;
   font-size:25px;
-  marigin: 15px 0;
+  margin: 15px 0;
 }
 
 footer a:hover{

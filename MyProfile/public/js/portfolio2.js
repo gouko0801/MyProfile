@@ -5,7 +5,7 @@
   let dr = '';
   let clean = 'clean';
 
-  let audio = new Audio(`./sound/${clean}${bd}${ch}${dr}.mp3`);
+  let audio = new Audio(`../sound/${clean}${bd}${ch}${dr}.mp3`);
 
   const audioReset = () => {
     audio.pause();
@@ -14,7 +14,7 @@
 
   const audioPlay = () => {
     audioReset()
-    audio.src = `./sound/${clean}${bd}${ch}${dr}.mp3`;
+    audio.src = `../sound/${clean}${bd}${ch}${dr}.mp3`;
     audio.play();
   }
 

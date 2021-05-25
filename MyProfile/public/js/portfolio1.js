@@ -10,6 +10,7 @@
   }
 
   btn.addEventListener('click', e => {
+    console.log('click');
     e.preventDefault();
     btnDisplayChange();
     const text = document.getElementById('text');
@@ -22,8 +23,8 @@
       let selectIndex = Math.floor(Math.random() * 4);
       effectors[selectIndex].classList.remove('hidden-animation');
       text.textContent = '今回はこれ！';
+      btnDisplayChange();
     }, 1200);
-    btnDisplayChange();
   });
 
   const closeBtns = document.querySelectorAll('.close');
