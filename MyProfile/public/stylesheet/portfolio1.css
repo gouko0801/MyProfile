@@ -1,39 +1,27 @@
-section{
+section {
   margin-bottom: 50px;
   padding-top: 76px;
 }
 
-.container{
+.container {
   width: 50%;
   margin: 0 auto;
 }
 
-.container h1{
+.container h1 {
   margin: 30px 0;
 }
 
-.container p{
+.container p {
   line-height: 25px;
 }
 
-.container a{
-  display: inline-block;
-  color: black;
-  opacity: .7;
-  padding:20px 0;
-}
-
-.container a:hover{
-  opacity: 1;
-}
-
-
-section ul{
+section ul {
   padding-left: 18px;
 }
 
 
-.effectors{
+.effectors {
   padding: 0;
   background-color:white;
   width: 500px;
@@ -46,29 +34,44 @@ section ul{
   transition: opacity 0,5s;
 }
 
-.effectors img{
+.effectors img {
   height: 200px;
   display: block;
   margin: 30px auto;
 }
 
-.effectors p{
+.effectors p {
   margin: 10px 15px;
   text-align: left;
 }
 
-.effectors a{
+.effectors a {
   display: inline-block;
   color: black;
   opacity: .7;
   padding:20px 0;
 }
 
-.effectors a:hover{
+.effectors a:hover {
   opacity: 1;
 }
 
-.hidden{
+.btn {
+  display: inline-block;
+  color: black;
+  opacity: .7;
+  padding:20px 0;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-animation {
   display: none;
   opacity: 0;
   transition: opacity 0.3s, transform 0s 0.3s;
@@ -76,43 +79,40 @@ section ul{
 }
 
 
-@media all and (max-width: 670px){
+@media all and (max-width: 670px) {
 
-  .container h1{
+  .container h1 {
     font-size: 15px;
     line-height: 18px;
   }
 
-  .container p{
+  .container p {
     font-size: 13px;
     line-height: 18px;
   }
 
-  #btn{
-    display: inline-block;
+  @media all and (max-width: 670px) {
+    .effectors {
+      width: 350px;
+    }
+
+    .effectors h1 {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    .effectors p {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    .effectorss a {
+      font-size:13px;
+      padding: 10px 0;
+    }
+
+    .effectors img {
+      height: 120px;
+    }
   }
-
-    @media all and (max-width: 670px){
-      .effectors{
-        width: 350px;
-      }
-
-      .effectors h1{
-        font-size: 15px;
-        line-height: 18px;
-      }
-
-      .effectors p{
-        font-size: 13px;
-        line-height: 15px;
-      }
-
-      .effectorss a{
-        font-size:13px;
-        padding: 10px 0;
-      }
-
-      .effectors img{
-        height: 120px;
-      }
-  }
+}

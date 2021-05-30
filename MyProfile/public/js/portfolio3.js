@@ -2,7 +2,7 @@
 {
   const shineTransition = () => {
     const p = document.getElementById('shine').querySelectorAll('p');
-    for(let x =0; x < p.length; x++){
+    for(let x =0; x < p.length; x++) {
       p[x].classList.remove('red');
       p[x].classList.remove('lime');
       p[x].classList.remove('skyblue');
@@ -15,39 +15,39 @@
     }
     let i = Math.floor(Math.random() * 5);
     const selectP = p[i];
-    i = Math.floor(Math.random() * 6 +1);
+    i = Math.floor(Math.random() * 6 + 1);
     let x = Math.floor(Math.random() * 5);
-    if(i > 5){
+    if(i > 5) {
       const selectP2 = p[x];
-      if(x === 0){
+      if(x === 0) {
         selectP2.classList.add('pink');
-      }else if(x % 4 === 0){
+      } else if (x % 4 === 0) {
         selectP2.classList.add('red');
-      }else if(x % 3 === 0){
+      } else if (x % 3 === 0) {
         selectP2.classList.add('lime');
-      }else if(x % 2 === 0){
+      } else if (x % 2 === 0) {
         selectP2.classList.add('skyblue');
-      }else{
+      } else {
         selectP2.classList.add('yellow');
       }
       selectP.classList.add('skyblue');
     }
-    if(i % 4 === 0){
+    if(i % 4 === 0) {
       selectP.classList.add('red');
-    }else if(i % 3 === 0){
+    } else if(i % 3 === 0) {
       selectP.classList.add('lime');
-    }else if(i % 2 === 0){
+    } else if(i % 2 === 0) {
       selectP.classList.add('yellow');
-    }else{
+    } else {
       selectP.classList.add('pink');
     }
-    if(x % 5 === 0){
+    if(x % 5 === 0) {
       selectP.classList.add('margin-4');
-    }else if(i % 4 === 0){
+    } else if (i % 4 === 0) {
       selectP.classList.add('margin-3');
-    }else if(i % 3 === 0){
+    } else if (i % 3 === 0) {
       selectP.classList.add('margin-2');
-    }else if(i % 2 === 0){
+    } else if (i % 2 === 0) {
       selectP.classList.add('margin-1');
     }
   setTimeout(shineTransition, 600);
